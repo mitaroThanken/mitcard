@@ -1,3 +1,9 @@
 [submodule "lib/kbd"]
 	path = lib/kbd
 	url = https://github.com/foostan/kbd.git
+[submodule "lib/teensy.pretty"]
+	path = lib/teensy.pretty
+	url = https://github.com/XenGi/teensy.pretty.git
+[submodule "lib/teensy_library"]
+	path = lib/teensy_library
+	url = https://github.com/XenGi/teensy_library.git
