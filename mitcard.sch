@@ -1,4 +1,407 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+LIBS:mitcard-cache
+EELAYER 26 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L teensy:Teensy-LC U1
+U 1 1 5C8F9274
+P 3450 2650
+F 0 "U1" H 3475 3887 60  0000 C CNN
+F 1 "Teensy-LC" H 3475 3781 60  0000 C CNN
+F 2 "teensy:Teensy30_31_32_LC" H 3450 2100 60  0001 C CNN
+F 3 "" H 3450 2100 60  0000 C CNN
+	1    3450 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 5C8F92DD
+P 1075 1250
+F 0 "#PWR01" H 1075 1100 50  0001 C CNN
+F 1 "VCC" H 1092 1423 50  0000 C CNN
+F 2 "" H 1075 1250 50  0001 C CNN
+F 3 "" H 1075 1250 50  0001 C CNN
+	1    1075 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5C8F9316
+P 1400 1350
+F 0 "#PWR02" H 1400 1100 50  0001 C CNN
+F 1 "GND" H 1405 1177 50  0000 C CNN
+F 2 "" H 1400 1350 50  0001 C CNN
+F 3 "" H 1400 1350 50  0001 C CNN
+	1    1400 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5C8F9348
+P 1400 1250
+F 0 "#FLG02" H 1400 1325 50  0001 C CNN
+F 1 "PWR_FLAG" H 1400 1424 50  0000 C CNN
+F 2 "" H 1400 1250 50  0001 C CNN
+F 3 "~" H 1400 1250 50  0001 C CNN
+	1    1400 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5C8F935C
+P 1075 1350
+F 0 "#FLG01" H 1075 1425 50  0001 C CNN
+F 1 "PWR_FLAG" H 1075 1523 50  0000 C CNN
+F 2 "" H 1075 1350 50  0001 C CNN
+F 3 "~" H 1075 1350 50  0001 C CNN
+	1    1075 1350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1075 1250 1075 1350
+Wire Wire Line
+	1400 1250 1400 1350
+Wire Wire Line
+	4550 3100 5050 3100
+Wire Wire Line
+	4550 3200 5050 3200
+Text Label 4825 3100 0    50   ~ 0
+SCL
+Text Label 4825 3200 0    50   ~ 0
+SDA
+Wire Wire Line
+	4550 3000 5050 3000
+Text Label 4850 3000 0    50   ~ 0
+INT
+$Comp
+L kbd:SW_PUSH SW1
+U 1 1 5C8F95F5
+P 3100 4800
+F 0 "SW1" H 3100 5055 50  0000 C CNN
+F 1 "SW_PUSH" H 3100 4964 50  0000 C CNN
+F 2 "kbd:CherryMX_Choc_Hotswap" H 3100 4800 50  0001 C CNN
+F 3 "" H 3100 4800 50  0000 C CNN
+	1    3100 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L kbd:SW_PUSH SW2
+U 1 1 5C8F963B
+P 3100 5650
+F 0 "SW2" H 3100 5905 50  0000 C CNN
+F 1 "SW_PUSH" H 3100 5814 50  0000 C CNN
+F 2 "kbd:CherryMX_Choc_Hotswap" H 3100 5650 50  0001 C CNN
+F 3 "" H 3100 5650 50  0000 C CNN
+	1    3100 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L kbd:SW_PUSH SW3
+U 1 1 5C8F966D
+P 4250 4800
+F 0 "SW3" H 4250 5055 50  0000 C CNN
+F 1 "SW_PUSH" H 4250 4964 50  0000 C CNN
+F 2 "kbd:CherryMX_Choc_Hotswap" H 4250 4800 50  0001 C CNN
+F 3 "" H 4250 4800 50  0000 C CNN
+	1    4250 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L kbd:SW_PUSH SW4
+U 1 1 5C8F96A7
+P 4250 5650
+F 0 "SW4" H 4250 5905 50  0000 C CNN
+F 1 "SW_PUSH" H 4250 5814 50  0000 C CNN
+F 2 "kbd:CherryMX_Choc_Hotswap" H 4250 5650 50  0001 C CNN
+F 3 "" H 4250 5650 50  0000 C CNN
+	1    4250 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 5650 2550 5650
+Wire Wire Line
+	3950 5650 3750 5650
+Wire Wire Line
+	3950 4800 3750 4800
+Wire Wire Line
+	3750 4450 3750 4800
+Wire Wire Line
+	3750 4800 3750 5650
+Wire Wire Line
+	2800 4800 2550 4800
+Wire Wire Line
+	2550 4450 2550 4800
+Connection ~ 2550 4800
+Wire Wire Line
+	2550 4800 2550 5650
+Connection ~ 3750 4800
+$Comp
+L Device:D D1
+U 1 1 5C8F9B3A
+P 3400 5050
+F 0 "D1" V 3446 4971 50  0000 R CNN
+F 1 "D" V 3355 4971 50  0000 R CNN
+F 2 "Keebio-Parts:Diode-dual" H 3400 5050 50  0001 C CNN
+F 3 "~" H 3400 5050 50  0001 C CNN
+	1    3400 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D3
+U 1 1 5C8FA2B3
+P 4550 5050
+F 0 "D3" V 4596 4971 50  0000 R CNN
+F 1 "D" V 4505 4971 50  0000 R CNN
+F 2 "Keebio-Parts:Diode-dual" H 4550 5050 50  0001 C CNN
+F 3 "~" H 4550 5050 50  0001 C CNN
+	1    4550 5050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D2
+U 1 1 5C8FA3A7
+P 3400 5900
+F 0 "D2" V 3446 5821 50  0000 R CNN
+F 1 "D" V 3355 5821 50  0000 R CNN
+F 2 "Keebio-Parts:Diode-dual" H 3400 5900 50  0001 C CNN
+F 3 "~" H 3400 5900 50  0001 C CNN
+	1    3400 5900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D4
+U 1 1 5C8FA3CF
+P 4550 5900
+F 0 "D4" V 4596 5821 50  0000 R CNN
+F 1 "D" V 4505 5821 50  0000 R CNN
+F 2 "Keebio-Parts:Diode-dual" H 4550 5900 50  0001 C CNN
+F 3 "~" H 4550 5900 50  0001 C CNN
+	1    4550 5900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4550 5200 4550 5300
+Wire Wire Line
+	4550 5300 3400 5300
+Wire Wire Line
+	4550 6050 4550 6150
+Wire Wire Line
+	4550 6150 3400 6150
+Wire Wire Line
+	3400 5200 3400 5300
+Connection ~ 3400 5300
+Wire Wire Line
+	3400 5300 2350 5300
+Wire Wire Line
+	3400 4900 3400 4800
+Wire Wire Line
+	4550 4900 4550 4800
+Wire Wire Line
+	4550 5650 4550 5750
+Wire Wire Line
+	3400 5650 3400 5750
+Wire Wire Line
+	3400 6050 3400 6150
+Connection ~ 3400 6150
+Wire Wire Line
+	3400 6150 2350 6150
+Text GLabel 2550 4450 1    50   Input ~ 0
+col0
+Text GLabel 3750 4450 1    50   Input ~ 0
+col1
+Text GLabel 2350 5300 0    50   Input ~ 0
+row0
+Text GLabel 2350 6150 0    50   Input ~ 0
+row1
+Text GLabel 2400 2200 0    50   Input ~ 0
+row0
+Text GLabel 2400 2300 0    50   Input ~ 0
+row1
+Text GLabel 2400 2100 0    50   Input ~ 0
+col0
+Text GLabel 2400 2000 0    50   Input ~ 0
+col1
+Wire Wire Line
+	2400 1700 1925 1700
+Wire Wire Line
+	2400 3300 1925 3300
+$Comp
+L power:GND #PWR03
+U 1 1 5C8FCD14
+P 1925 3450
+F 0 "#PWR03" H 1925 3200 50  0001 C CNN
+F 1 "GND" H 1930 3277 50  0000 C CNN
+F 2 "" H 1925 3450 50  0001 C CNN
+F 3 "" H 1925 3450 50  0001 C CNN
+	1    1925 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1925 1700 1925 3300
+Connection ~ 1925 3300
+Wire Wire Line
+	1925 3300 1925 3450
+$Comp
+L kbd:MJ-4PP-9 J1
+U 1 1 5C8FF89C
+P 5575 4725
+F 0 "J1" H 5605 5001 50  0000 C CNN
+F 1 "MJ-4PP-9" H 5605 4910 50  0000 C CNN
+F 2 "kbd:MJ-4PP-9_1side" H 5850 4900 50  0001 C CNN
+F 3 "~" H 5850 4900 50  0001 C CNN
+	1    5575 4725
+	1    0    0    -1  
+$EndComp
+$Comp
+L kbd:MJ-4PP-9 J2
+U 1 1 5C8FF8D2
+P 5600 5575
+F 0 "J2" H 5630 5851 50  0000 C CNN
+F 1 "MJ-4PP-9" H 5630 5760 50  0000 C CNN
+F 2 "kbd:MJ-4PP-9_1side" H 5875 5750 50  0001 C CNN
+F 3 "~" H 5875 5750 50  0001 C CNN
+	1    5600 5575
+	1    0    0    -1  
+$EndComp
+Text Label 5950 5600 0    50   ~ 0
+INT
+Wire Wire Line
+	5775 4650 5850 4650
+Wire Wire Line
+	5850 4650 5850 4600
+$Comp
+L power:GND #PWR04
+U 1 1 5C9007C9
+P 5850 4600
+F 0 "#PWR04" H 5850 4350 50  0001 C CNN
+F 1 "GND" V 5855 4472 50  0000 R CNN
+F 2 "" H 5850 4600 50  0001 C CNN
+F 3 "" H 5850 4600 50  0001 C CNN
+	1    5850 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5775 4750 5900 4750
+Wire Wire Line
+	5900 4750 5900 4800
+Wire Wire Line
+	5900 4800 6350 4800
+Wire Wire Line
+	5775 4800 5850 4800
+Wire Wire Line
+	5850 4800 5850 4900
+Wire Wire Line
+	5850 4900 6725 4900
+NoConn ~ 5800 5500
+NoConn ~ 5800 5650
+Wire Wire Line
+	5800 5600 6150 5600
+NoConn ~ 5800 5550
+Text Label 5950 4800 0    50   ~ 0
+SCL
+Text Label 5950 4900 0    50   ~ 0
+SDA
+NoConn ~ 2400 2400
+NoConn ~ 2400 2500
+NoConn ~ 2400 2600
+NoConn ~ 2400 2700
+NoConn ~ 2400 2800
+NoConn ~ 2400 2900
+NoConn ~ 2400 1900
+NoConn ~ 2400 1800
+NoConn ~ 2400 3000
+NoConn ~ 2400 3100
+NoConn ~ 2400 3400
+NoConn ~ 2400 3500
+NoConn ~ 2400 3600
+NoConn ~ 4550 3600
+NoConn ~ 4550 3500
+NoConn ~ 4550 3400
+NoConn ~ 4550 3300
+NoConn ~ 4550 2900
+NoConn ~ 4550 2800
+NoConn ~ 4550 2700
+NoConn ~ 4550 2600
+NoConn ~ 4550 2500
+NoConn ~ 4550 2400
+NoConn ~ 4550 2300
+NoConn ~ 4550 2200
+NoConn ~ 4550 2100
+NoConn ~ 4550 2000
+NoConn ~ 4550 1900
+NoConn ~ 4550 1800
+Wire Wire Line
+	2400 3200 2000 3200
+Text Label 2075 3200 0    50   ~ 0
+3.3V
+Wire Wire Line
+	5775 4700 6175 4700
+Wire Wire Line
+	6175 4700 6175 4150
+$Comp
+L Device:R R1
+U 1 1 5C916B94
+P 6350 4450
+F 0 "R1" H 6420 4496 50  0000 L CNN
+F 1 "4.7K" H 6420 4405 50  0000 L CNN
+F 2 "Keebio-Parts:Resistor-Hybrid" V 6280 4450 50  0001 C CNN
+F 3 "~" H 6350 4450 50  0001 C CNN
+	1    6350 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C916BE6
+P 6725 4450
+F 0 "R2" H 6795 4496 50  0000 L CNN
+F 1 "4.7K" H 6795 4405 50  0000 L CNN
+F 2 "Keebio-Parts:Resistor-Hybrid" V 6655 4450 50  0001 C CNN
+F 3 "~" H 6725 4450 50  0001 C CNN
+	1    6725 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 4600 6350 4800
+Connection ~ 6350 4800
+Wire Wire Line
+	6350 4800 6875 4800
+Wire Wire Line
+	6725 4600 6725 4900
+Connection ~ 6725 4900
+Wire Wire Line
+	6725 4900 6875 4900
+Wire Wire Line
+	6350 4300 6350 4150
+Wire Wire Line
+	6175 4150 6350 4150
+Connection ~ 6350 4150
+Wire Wire Line
+	6350 4150 6725 4150
+Wire Wire Line
+	6725 4300 6725 4150
+Connection ~ 6725 4150
+Wire Wire Line
+	6725 4150 6925 4150
+Text Label 6275 4150 2    50   ~ 0
+3.3V
+Text Label 4550 4800 0    50   ~ 0
+col1row0
+Text Label 4550 6150 0    50   ~ 0
+col1row1
+Text Label 2550 5650 0    50   ~ 0
+col0row1
+Text Label 3400 5225 2    50   ~ 0
+col0row0
 $EndSCHEMATC
