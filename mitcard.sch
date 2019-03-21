@@ -225,13 +225,13 @@ Text GLabel 2350 5300 0    50   Input ~ 0
 row0
 Text GLabel 2350 6150 0    50   Input ~ 0
 row1
-Text GLabel 2400 2200 0    50   Input ~ 0
-row0
-Text GLabel 2400 2300 0    50   Input ~ 0
-row1
 Text GLabel 2400 2100 0    50   Input ~ 0
-col0
+row0
 Text GLabel 2400 2000 0    50   Input ~ 0
+row1
+Text GLabel 2400 2200 0    50   Input ~ 0
+col0
+Text GLabel 2400 2300 0    50   Input ~ 0
 col1
 Wire Wire Line
 	2400 1700 1925 1700
