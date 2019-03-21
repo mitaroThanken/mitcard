@@ -81,9 +81,7 @@ Text Label 4825 3100 0    50   ~ 0
 SCL
 Text Label 4825 3200 0    50   ~ 0
 SDA
-Wire Wire Line
-	4550 3000 5050 3000
-Text Label 4850 3000 0    50   ~ 0
+Text Label 2075 2700 0    50   ~ 0
 INT
 $Comp
 L kbd:SW_PUSH SW1
@@ -316,7 +314,6 @@ SDA
 NoConn ~ 2400 2400
 NoConn ~ 2400 2500
 NoConn ~ 2400 2600
-NoConn ~ 2400 2700
 NoConn ~ 2400 2800
 NoConn ~ 2400 2900
 NoConn ~ 2400 1900
@@ -404,4 +401,7 @@ Text Label 2550 5650 0    50   ~ 0
 col0row1
 Text Label 3400 5225 2    50   ~ 0
 col0row0
+Wire Wire Line
+	2400 2700 2000 2700
+NoConn ~ 4550 3000
 $EndSCHEMATC
