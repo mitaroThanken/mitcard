@@ -312,17 +312,11 @@ SCL
 Text Label 5950 4900 0    50   ~ 0
 SDA
 NoConn ~ 2400 2400
-NoConn ~ 2400 2500
-NoConn ~ 2400 2600
-NoConn ~ 2400 2800
-NoConn ~ 2400 2900
 NoConn ~ 2400 1900
 NoConn ~ 2400 1800
-NoConn ~ 2400 3000
 NoConn ~ 2400 3100
 NoConn ~ 2400 3400
 NoConn ~ 2400 3500
-NoConn ~ 2400 3600
 NoConn ~ 4550 3600
 NoConn ~ 4550 3500
 NoConn ~ 4550 3400
@@ -404,4 +398,56 @@ col0row0
 Wire Wire Line
 	2400 2700 2000 2700
 NoConn ~ 4550 3000
+Text GLabel 2400 2500 0    50   Input ~ 0
+RX
+Text GLabel 2400 2600 0    50   Input ~ 0
+TX
+Text GLabel 2400 2800 0    50   Input ~ 0
+CS
+Text GLabel 2400 2900 0    50   Input ~ 0
+MOSI
+Text GLabel 2400 3000 0    50   Input ~ 0
+MISO
+Text GLabel 2400 3600 0    50   Input ~ 0
+SCK
+Text GLabel 7725 4900 2    50   Input ~ 0
+RX
+Text GLabel 7725 5000 2    50   Input ~ 0
+TX
+Text GLabel 7725 5100 2    50   Input ~ 0
+CS
+Text GLabel 7725 5200 2    50   Input ~ 0
+MOSI
+Text GLabel 7725 5300 2    50   Input ~ 0
+MISO
+Text GLabel 7725 5400 2    50   Input ~ 0
+SCK
+$Comp
+L Connector_Generic:Conn_01x08 J3
+U 1 1 5C9399BA
+P 7525 5200
+F 0 "J3" H 7445 4575 50  0000 C CNN
+F 1 "Conn_01x08" H 7445 4666 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x08_P2.54mm_Vertical" H 7525 5200 50  0001 C CNN
+F 3 "~" H 7525 5200 50  0001 C CNN
+	1    7525 5200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5C93DE3F
+P 8275 4800
+F 0 "#PWR05" H 8275 4550 50  0001 C CNN
+F 1 "GND" V 8280 4672 50  0000 R CNN
+F 2 "" H 8275 4800 50  0001 C CNN
+F 3 "" H 8275 4800 50  0001 C CNN
+	1    8275 4800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7725 5500 8300 5500
+Wire Wire Line
+	7725 4800 8275 4800
+Text Label 8025 5500 0    50   ~ 0
+3.3V
 $EndSCHEMATC
