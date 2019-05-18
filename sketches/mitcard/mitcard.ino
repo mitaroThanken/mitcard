@@ -84,7 +84,7 @@ void printTitle(String title, int font)
   sincePrint = 0;
 }
 
-void setup() {
+void setup(void) {
   // LED
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, ledState);
@@ -131,7 +131,13 @@ void setup() {
   touchL_th = touchL_avg + TOUCH_DIFF;
   touchR_th = touchR_avg + TOUCH_DIFF;
 
+  // Random seed.
+  randomSeed(A0);
+
+  // for Debug
   Serial.begin(9600);
+
+  // Keyboard begin.
   Keyboard.begin();
 
   // TeencyView (clear)
@@ -141,7 +147,7 @@ void setup() {
 int delaycount = 0;
 bool needToToggleLed = true;
 
-void scanKeyswitches() {
+void scanKeyswitches(void) {
   for (int row = 0; row < ROW_NUM; row++) {
     digitalWrite(ROW_PIN[row], LOW);
 
@@ -177,7 +183,7 @@ void scanKeyswitches() {
   }
 }
 
-void scanTouches() {
+void scanTouches(void) {
   renew_touch_avg();
   if (touchL_avg > touchL_th) {
     if ((!touchL_touched) && (touchB_avg > touchB_th)) {
@@ -205,11 +211,46 @@ void scanTouches() {
 
 const int oledInterval = 5000;
 
-void oledClearOrDemo() {
-  if (sincePrint > oledInterval * 2) {
+void oledClearOrDemo(void) {
+  if (sincePrint > oledInterval * 6) {
     oled.clear(PAGE);
     oled.display();
     sincePrint = 0;
+  } else if (sincePrint > oledInterval * 5) {
+    for (int i = 0; i < 64; i++) {
+      oled.pixel(random(oled.getLCDWidth()), random(oled.getLCDHeight()), WHITE, XOR);
+    }
+    oled.display();
+  } else if (sincePrint > oledInterval * 4) {
+    oled.clear(PAGE);
+    oled.setFontType(1);
+    oled.setCursor(0,0);
+    oled.print("Touch");
+    oled.setCursor(0, oled.getFontHeight());
+    oled.print("white squares.");
+    oled.display();
+  } else if (sincePrint > oledInterval * 3) {
+    oled.clear(PAGE);
+    oled.setFontType(0);
+    oled.setCursor(0, oled.getFontHeight());
+    oled.print("https://github.com/");
+    oled.setCursor(0, oled.getFontHeight() * 2);
+    oled.print("mitaroThanken/mitcard");
+    oled.display();
+  } else if (sincePrint > oledInterval * 2) {
+    int y = 0;
+    oled.clear(PAGE);
+    oled.setFontType(1);
+    oled.setCursor(0,y);
+    oled.print("mitcard");
+    y += oled.getFontHeight();
+    oled.setCursor(0, y);
+    oled.setFontType(0);
+    oled.print("designed by");
+    y += oled.getFontHeight();
+    oled.setCursor(0, y);
+    oled.print("mitaroThanken.");
+    oled.display();
   } else if (sincePrint > oledInterval) {
     oled.clear(PAGE);
     oled.setFontType(1);    // Set font to type 1
@@ -222,7 +263,7 @@ void oledClearOrDemo() {
   }
 }
 
-void loop() {
+void loop(void) {
   scanKeyswitches();
   scanTouches();
   oledClearOrDemo();
